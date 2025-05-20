@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>NOTAS ASIGNATURA FRONT-END</h2>
+    <div id="average">promedio general del curso: No disponible</div>
+    <form id="studentform">
+    <div>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" required 
+               pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+"
+               title="Por favor ingrese solo letras y espacios"
+               oninvalid="this.setCustomValidity('El nombre es obligatorio y solo debe contener letras')"
+               oninput="this.setCustomValidity('')">
+    </div>
+    <div>
+        <label for="lastname">Apellido: </label>
+        <input type="text" id="lastname" required
+               pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+"
+               title="Por favor ingrese solo letras y espacios"
+               oninvalid="this.setCustomValidity('El apellido es obligatorio y solo debe contener letras')"
+               oninput="this.setCustomValidity('')">
+    </div>
+    <div>
+        <label for="fecha">Fecha: </label>
+        <input type="date" id="fecha" required
+               oninvalid="this.setCustomValidity('Por favor seleccione una fecha')"
+               oninput="this.setCustomValidity('')">
+    </div>
+    <div>
+        <label for="grade">Nota:</label>
+        <input type="number" id="grade" step="0.1" min="1" max="7" required
+               oninvalid="this.setCustomValidity('La nota debe estar entre 1.0 y 7.0')"
+               oninput="this.setCustomValidity('')">
+    </div>
+    <button type="submit">Guardar</button>
+</form>
+<table id="studentstable" border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>nombre:</th>
+            <th>apellido:</th>
+            <th>fecha:</th>
+            <th>nota:</th>
+            <th>acciones:</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!--FILAS DE DATOS-->
+    </tbody>
+</table>
+    <script src="script.js"></script>
+</body>
+</html>

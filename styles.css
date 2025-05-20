@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background-color: #1e2329;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #4afa9a;
+}
+
+h2 {
+    color: #4afa9a;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#average {
+    background-color: #2a3138;
+    color: #4afa9a;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border: 1px solid #4afa9a;
+}
+
+#studentform {
+    background-color: #2a3138;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid #4afa9a;
+}
+
+#studentform div {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4afa9a;
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #1e2329;
+    border: 1px solid #4afa9a;
+    color: #4afa9a;
+    font-family: 'Courier New', monospace;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #4afa9a;
+    background-color: #2a3138;
+}
+
+button {
+    background-color: #4afa9a;
+    color: #1e2329;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #3ad488;
+}
+
+#studentstable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2a3138;
+    border: 1px solid #4afa9a;
+}
+
+#studentstable th {
+    background-color: #4afa9a;
+    color: #1e2329;
+    padding: 0.5rem;
+    text-align: left;
+    font-weight: normal;
+}
+
+#studentstable td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #4afa9a;
+    color: #4afa9a;
+}
+
+#studentstable tr:last-child td {
+    border-bottom: none;
+}
+
+/* Estilos para el botón de eliminar */
+.delete-btn {
+    padding: 0.3rem 0.8rem;
+    margin: 0 0.2rem;
+    width: auto;
+    font-size: 0.9rem;
+    background-color: #ff4757;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #ff6b81;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    #studentform {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #average, 
+    #studentform {
+        padding: 0.8rem;
+    }
+
+    input, 
+    button {
+        padding: 0.5rem;
+    }
+
+    #studentstable th,
+    #studentstable td {
+        padding: 0.5rem;
+    }
+
+    .delete-btn {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+    }
+} 
