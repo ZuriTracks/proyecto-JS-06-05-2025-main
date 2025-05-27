@@ -99,7 +99,14 @@ const calculateAverage = () => {
     }
     const totalGrades = students.reduce((sum, student) => sum + student.grade, 0);
     const average = totalGrades / students.length;
-    promedioDiv.textContent = `El promedio es: ${average.toFixed(2)}`;
+    // Cálculo de total, aprobados y reprobados
+    const total = students.length;
+    const aprobados = students.filter(student => student.grade >= 4).length;
+    const reprobados = students.filter(student => student.grade < 4).length;
+    const porcentajeAprobados = (aprobados / total) * 100;
+    const porcentajeReprobados = (reprobados / total) * 100;
+    // Mostrar todo en el mismo div
+    promedioDiv.textContent = `El promedio es: ${average.toFixed(2)} | Total: ${total} | Aprobados: ${porcentajeAprobados.toFixed(2)}% | Reprobados: ${porcentajeReprobados.toFixed(2)}%`;
 };
 
 /*
